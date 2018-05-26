@@ -1,19 +1,22 @@
 var movies = [
     {
         id: 1,
-        img: './img/hp.jpg',
+        src: './img/hp.jpg',
+        alt: 'zdjecie harry potter',
         title: 'Harry Potter',
         desc: 'film o czarodzieju'
     },
     {
         id: 2,
-        img: './img/kl.jpg',
+        src: './img/kl.jpg',
+        alt: 'zdjęcie król lew',
         title: 'Król Lew',
         desc: 'Film o królu sawanny'
     },
     {
         id: 3,
-        img:'./img/och.jpg',
+        src:'./img/och.jpg',
+        alt: 'zdjęcie ojciec chrzestny',
         title: 'Ojciec Chrzestny',
         desc: 'Opowieść o nowojorskiej rodzinie mafijnej. Starzejący się Don Corleone pragnie przekazać władzę swojemu synowi.'
     }
@@ -22,7 +25,7 @@ var movies = [
   var moviesElements = movies.map(function(movie) {
     return React.createElement('li', {key: movie.id},
         React.createElement('h2', {}, movie.title),
-        React.createElement('img', {src: movie.img}),
+        React.createElement('img', {src: movie.src, alt: movie.alt}),
         React.createElement('p', {}, movie.desc),
       );
   });
