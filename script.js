@@ -22,7 +22,7 @@ var movies = [
   var moviesElements = movies.map(function(movie) {
     return React.createElement('li', {key: movie.id},
         React.createElement('h2', {}, movie.title),
-        React.createElement('img', {src:movie.img}),
+        React.createElement('img', {src: movie.img}),
         React.createElement('p', {}, movie.desc),
       );
   });
